@@ -14,9 +14,5 @@ jobs:
       - name: Run a one-line script
         # Need to reference this here for now, otherwise it's going to be removed.
         run: echo Hello, world ${{ secrets.ACTIONS_WORKFLOW_DEBUG }}
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
