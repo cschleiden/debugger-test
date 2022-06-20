@@ -14,5 +14,7 @@ jobs:
       - name: Run a one-line script
         # Need to reference this here for now, otherwise it's going to be removed.
         run: echo Hello, world ${{ secrets.ACTIONS_WORKFLOW_DEBUG }}
+      - name: 'vscode://cschleiden.vscode-github-actions?url=test'
+        run: echo "vscode://cschleiden.vscode-github-actions?url=test"
       - name: Setup upterm session
         uses: lhotari/action-upterm@v1
