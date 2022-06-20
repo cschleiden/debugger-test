@@ -9,14 +9,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        # Need to reference this here for now, otherwise it's going to be removed.
-        run: echo Hello, world ${{ secrets.ACTIONS_WORKFLOW_DEBUG }}
       - name: 'vscode://cschleiden.vscode-github-actions?url=test'
         run: echo "vscode://cschleiden.vscode-github-actions?url=test"
-      - run: echo "some other step"
-      - run: sleep 10
+      - run: echo "another step"
+      - run: exit 1
       - run: echo "hello world"
       - run: echo "again"
