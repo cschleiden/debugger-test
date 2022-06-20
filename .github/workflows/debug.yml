@@ -12,5 +12,6 @@ jobs:
       - id: fruit
         run: echo "::set-output name=action_fruit::strawberry"
       - run: echo "another step"      
+      - run: exit 1
       - run: echo "hello world"
       - run: echo "again"
