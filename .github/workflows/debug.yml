@@ -9,8 +9,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: 'vscode://cschleiden.vscode-github-actions?url=test'
-        run: echo "vscode://cschleiden.vscode-github-actions?url=test"
       - id: fruit
         run: echo "::set-output name=action_fruit::strawberry"
       - run: echo "another step"      
